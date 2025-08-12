@@ -1,19 +1,19 @@
+// This file is part of a Java OOP project on LinkedIn Learning
+// It contains the main class for the application.
+// This one is for building Employee instances and managing their attributes.
+import java.awt.Color;
+
 public class Main {
+
     public static void main(String[] args) {
-        Tree myFavoriteOakTree = new Tree(120,12, TreeType.OAK);
-        System.out.println("My favorite tree is a " + myFavoriteOakTree.treeType + 
-                           " with a height of " + myFavoriteOakTree.heightFt + 
-                           " feet and a trunk diameter of " + myFavoriteOakTree.trunkDiameterIn + 
-                           " inches.");
-
-        Tree myFavoriteMapleTree    = new Tree(90, 30, TreeType.MAPLE);    
         
-        myFavoriteMapleTree.announceTallTree();
-
-        myFavoriteOakTree.announceTallTree();
-
-        System.out.println(Tree.TRUNK_COLOR); // static variable access for trunk color
+        // Create Employee instances
+        Employee myEmployeeOne = new Employee("Alice", 30, 50000, LocationType.MAIN_OFFICE);
+        Employee myEmployeeTwo = new Employee("Bob", 25, 60000, LocationType.REMOTE);
         
-        Tree.announceTree(); // static method call to announce tree color
+        myEmployeeOne.raiseSalary(10); // Raises Alice's salary by 10%
+        System.out.println("Alice's new salary: " + myEmployeeOne.salary);
+        System.out.println("Bob's salary: " + myEmployeeTwo.salary );
     }
+
 }
