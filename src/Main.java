@@ -7,7 +7,13 @@ public class Main {
                            " inches.");
 
         Tree myFavoriteMapleTree    = new Tree(90, 30, TreeType.MAPLE);    
+        
         myFavoriteMapleTree.announceTallTree();
+
         myFavoriteOakTree.announceTallTree();
+
+        System.out.println(Tree.TRUNK_COLOR); // static variable access for trunk color
+        
+        Tree.announceTree(); // static method call to announce tree color
     }
 }
